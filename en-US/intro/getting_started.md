@@ -97,7 +97,7 @@ In order to create something more interesting let's add some more nodes.
 
 Chiχ is all about utilizing the fast amount of javascript packages already available on the internet.
 
-It's main concept is not to write code, but utilizing existing functionality and wrapping it in such a way the packages can be composed into graphs.
+It's main concept is not to write code, but using existing functionality and wrapping it in such a way the packages can be composed into graphs.
 
 So let's pick an interesting package from npm. e.g. https://www.npmjs.com/package/say
 Instead of just logging `Hello World!` it would be nice to actually hear it.
