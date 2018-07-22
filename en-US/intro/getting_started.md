@@ -150,6 +150,50 @@ Note: In able to run say.js festival must be installed. On ubuntu this is as eas
 
 If all went well you'll hear `Hello World!`
 
+### Using context
+
+Instead of specifying input in the flow definition file, we can very easily convert it to context which will be stored within the flow:
+```
+provider ./{ns}.{name}.yml
+
+'Hello World!' -> @msg Log(console/log)
+```
+All that has to be done is prepending an `@` to the port.
+
+```
+$ fbpx input hello_world.fbp 
+
+ Input Data
+
+┌──────┬──────┬─────────┐
+│ Data │ Port │ Process │
+└──────┴──────┴─────────┘
+
+```
+The input data is now empty.
+
+Instead the context is now specified within the flow:
+```
+$ fbpx convert hello_world.fbp --yaml
+type: flow
+nodes:
+  - id: SayIt
+    title: SayIt
+    ns: console
+    name: say
+    context:
+      msg: Hello World!
+links: []
+providers:
+  '@':
+    path: './{ns}.{name}.yml'
+
+```
+So when this definition is distributed it will contain the desired context.
+
+In this case the node will automatically run, because the input of the port is fulfilled by this context. (try running the flow again).
+
+
 
 
 
