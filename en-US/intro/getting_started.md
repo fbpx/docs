@@ -86,7 +86,58 @@ In this case we directly refer to the contents of packet arriving at the `msg` p
 
 Having created our node definition, the flow can now be executed.
 
-```
- fbpx run hello_world.fbp 
+```bash
+$ fbpx run hello_world.fbp 
 Hello World!
 ```
+
+### Creating Links
+
+In order to create something more interesting let's add some more nodes.
+
+Chiχ is all about utilizing the fast amount of javascript packages already available on the internet.
+
+It's main concept is not to write code, but utilizing existing functionality and wrapping it in such a way the packages can be composed into graphs.
+
+So let's pick an interesting package from npm. e.g. https://www.npmjs.com/package/say
+Instead of just logging `Hello World!` it would be nice to actually hear it.
+
+In order to use packages, we first must execute `npm init -y` inside our project directory.
+```
+$ npm init -y
+```
+
+As `fbpx` will expect it to be present and store the dependencies.
+
+We can either directly install the package through npm or use `fbpx install hello_world.fbp' to install all dependencies used by the nodes defined in the flow file.
+
+Created a new file following our provider's resolve pattern (`./{ns}.{name}.yml`). To contain our `Say.js` node definition.
+
+console.say.yml
+```
+title: Say.js
+ns: console
+name: say
+ports:
+  input:
+    msg:
+      type: string
+dependencies:
+  npm:
+    say: 'latest'
+fn: 'say.speak($.msg)'
+```
+
+We now have declared a dependencies of the type 'npm'.
+All dependencies will be available by their name, and converted to an underscored string if necessary.
+
+Having defined our say component, let's add it to our flow definition:
+```
+provider ./{ns}.{name}.yml
+
+'Hello World!' -> msg SayIt(console/say)
+
+```
+
+
+
