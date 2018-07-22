@@ -4,95 +4,85 @@ name: Getting Started
 
 # Getting Started
 
-Let's create our first Peach project!
+Let's create our first Chiχ project!
 
-By convention, every Peach project should be named in format `*.peach`, here we choose `my.peach`.
+After you've install the fbpx cli, you can test it by writing your first .fbp file.
 
-In this tutorial, we're going to put our Peach project in download directory:
-
-```sh
-$ cd ~/Downloads
-```
-
-Then, we need to setup default things (Suppose `$GOPATH/bin` has been added to your `$PATH`):
-
-```sh
-$ peach new -target=my.peach
-➜  Creating 'my.peach'...
-➜  Creating 'templates'...
-➜  Creating 'public'...
-Do you want to use custom templates?[Y/n] n
-✓  Done!
-```
-
-Let's take a quick look of how our project is organized:
-
-```sh
-$ cd my.peach
-$ tree -L 2
-.
-├── conf
-│   ├── app.ini
-│   └── locale
-├── public
-│   ├── css
-│   ├── fonts
-│   ├── img
-│   └── js
-└── templates
-    ├── 404.html
-    ├── base.html
-    ├── disqus.html
-    ├── docs.html
-    ├── duoshuo.html
-    ├── footer.html
-    ├── home.html
-    ├── navbar.html
-    └── search.html
-```
-
-Great! We've got almost everything we need, except one thing: custom configuration.
-
-To quickly get started with, we are going to use the one Peach uses, it is [open sourced on GitHub](https://github.com/peachdocs/peach.peach). :heart_eyes:
-
-So... how do we use that?
-
-Right, we clone it to local system, and name the directory to `custom` which Peach uses it to load all custom things.
-
-```sh
-git clone https://github.com/peachdocs/peach.peach.git custom
-```
-
-Very well! You can't wait to try it out, can you?
-
-Why don't you now start a Peach server in current directory (in this case, it is `~/Downloads/my.peach`):
-
-```sh
-$ peach web
-```
-
-OK, Peach is now running and you should see log on your terminal:
+Open a blank file with an .fbp extension. e.g. `hello_world.fbp`
 
 ```
-[Peach] 15-10-06 19:58:44 [ INFO] Peach 0.8.0.1025
-[Peach] 15-10-06 19:58:44 [ INFO] Peach Server Listen on 0.0.0.0:5556
+provider ./{ns}.{name}.yml
+
+'Hello World!' -> msg Log(console/log)
 ```
 
-Based on the log, Peach is customized itself to listen on `0.0.0.0:5556` (default is `5555`), and if you open your browser and visit http://localhost:5556/, miracle happens!
+Save the file and close it.
 
-If you curious about what is in Peach's custom configuration, let me briefly explain in the `custom/app.ini` file:
+We have now defined a flow which will receive a `Hello World!` message on it's `msg` port.
 
-```ini
-# Change listen port
-HTTP_PORT = 5556
+The provider is mandatory and specifies how to resolve the nodes we are using within our flow definition.
 
-[docs]
-# Set documentation to a remote Git source adrress
-TYPE = remote
-# URL to remote Git source
-TARGET = https://github.com/Unknwon/peach-docs.git
+Before running it we can inspect the flow to see what we have defined:
+```
+$ fbpx convert hello_world.fbp --yaml
+type: flow
+nodes:
+  - id: Log
+    title: Log
+    ns: console
+    name: log
+links: []
+providers:
+  '@':
+    path: './{ns}.{name}.yml'
+
 ```
 
-This should explain why we didn't do anything with documentation but we can view it automatically.
+We have defined one node and do not have any links yet.
+The `@` indicates the default provider for this flow file is `{ns}.{name}.yml`
 
-Well, let's moving forward: [Setup your documentation repository](../howto/documentation).
+The input we have defined in the flow definition is not present, this is by intention.
+You can verify whether the input is actually detected by running:
+```
+ $ fbpx input hello_world.fbp 
+
+ Input Data
+
+┌────────────────┬──────┬─────────┐
+│ Data           │ Port │ Process │
+├────────────────┼──────┼─────────┤
+│ "Hello World!" │ msg  │ Log     │
+└────────────────┴──────┴─────────┘
+```
+
+So now try running the flow:
+```
+$ fbpx run hello_world.fbp 
+ENOENT: no such file or directory, open './console.log.yml'
+```
+
+This is kind of expected, we have specified how to resolve the nodes, but did not create a node definition file yet.
+
+So let's create it:
+console.log.yml
+```
+title: My Console Log Node
+ns: console
+name: log
+ports:
+  input:
+    in:
+      type: string
+fn: "console.log($.in)"
+```
+The `ns` and `name` pair are mandatory and must match what was specified in the provider uri.
+
+The ports describe what input we expect.
+
+`fn` contains the function body of which the contains will be evaluated.
+
+Having created our node definition, the flow can now be executed.
+
+```
+$ 
+```
