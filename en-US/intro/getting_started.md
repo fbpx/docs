@@ -71,9 +71,9 @@ ns: console
 name: log
 ports:
   input:
-    in:
+    msg:
       type: string
-fn: "console.log($.in)"
+fn: "console.log($.msg)"
 ```
 The `ns` and `name` pair are mandatory and must match what was specified in the provider uri.
 
@@ -81,8 +81,12 @@ The ports describe what input we expect.
 
 `fn` contains the function body of which the contains will be evaluated.
 
+The '$' namespace contains the `Packet` api and gives access to the current input data. 
+In this case we directly refer to the contents of packet arriving at the `msg` port and log it's contents.
+
 Having created our node definition, the flow can now be executed.
 
 ```
-$ 
+ fbpx run hello_world.fbp 
+Hello World!
 ```
