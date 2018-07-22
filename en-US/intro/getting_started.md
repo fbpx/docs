@@ -194,6 +194,48 @@ So when this definition is distributed it will contain the desired context.
 In this case the node will automatically run, because the input of the port is fulfilled by this context. (try running the flow again).
 
 
+### Making a request
 
+Let's make a request to fetch data, in order to do this we would need a request library and a target url.
+In this case we'll load a news feed from cnn: http://rss.cnn.com/rss/edition_world.rss
+
+So instead of a hello world, the headlines are read to us.
+
+
+```
+title: Request
+ns: network
+name: request
+ports:
+  input:
+    method:
+      type: string
+      default: GET
+      enum:
+        - POST
+        - GET
+    data:
+      type: object
+      required: false
+    uri:
+      type: string
+  output:
+    out:
+      type: any
+dependencies:
+  npm:
+    request: latest
+fn: |
+  output = () => {
+    request({
+      method: $.method,
+      uri: $.uri
+    }, ({ body }) => {
+      output({
+        out: $.create(body)
+      })
+    })
+  }
+```
 
 
