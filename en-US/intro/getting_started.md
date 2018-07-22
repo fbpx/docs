@@ -139,5 +139,17 @@ provider ./{ns}.{name}.yml
 
 ```
 
+First make sure we have installed the dependencies by running:
+```
+fbpx install hello_world.fbp 
++ say@0.15.0
+added 2 packages from 2 contributors and audited 2 packages in 1.134s
+found 0 vulnerabilities
+```
+Note: In able to run say.js festival must be installed. On ubuntu this is as easy as running `apt install festival`
+
+If all went well you'll hear `Hello World!`
+
+
 
 
