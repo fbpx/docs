@@ -37,3 +37,15 @@ on.input.in = () => {
 }
 ```
 
+These port functions can also be defined within the port definition itself, e.g.
+```
+ports:
+  input:
+    in:
+      type: string
+      fn: |
+        output({
+          out: $.create('My Result')
+        })
+```
+
