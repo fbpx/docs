@@ -5,6 +5,13 @@
 # Node Functions
 There are several ways of defining to functionality within the node.
 
+These functions are very convenient in many cases, they are however also limited.
+If orchestration between ports becomes important, you should use the class variant.
+
+e.g. if the node will only require some settings and one main input port, the function type is convenient.
+
+The function runs, executes and is ready for the next call.
+
 
 ### Just the function body
 
