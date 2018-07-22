@@ -1,0 +1,86 @@
+{
+  "dependencies": {
+    "npm": {
+      "rss-parser": "latest",
+      "say": "latest"
+    }
+  },
+  "nodeDefinitions": {
+    "./{ns}.{name}.yml": {
+      "network": {
+        "rss": {
+          "title": "Rss",
+          "ns": "network",
+          "name": "rss",
+          "ports": {
+            "input": {
+              "url": {
+                "type": "string"
+              }
+            },
+            "output": {
+              "out": {
+                "type": "string"
+              }
+            }
+          },
+          "dependencies": {
+            "npm": {
+              "rss-parser": "latest"
+            }
+          },
+          "fn": "output = function () {\n  var parser = new rss_parser();\n\n  parser.parseURL($.url)\n    .then((feed) => {\n      cb({ out: $.create(feed.title) })\n\n      feed.items.forEach(item => {\n        cb({ out: $.create(item.title) })\n      });\n    })\n}\n",
+          "provider": "./{ns}.{name}.yml"
+        }
+      },
+      "console": {
+        "log": {
+          "title": "Log",
+          "ns": "console",
+          "name": "log",
+          "ports": {
+            "input": {
+              "msg": {
+                "type": "string"
+              }
+            },
+            "output": {
+              "out": {
+                "type": "string"
+              }
+            }
+          },
+          "fn": "output = () => {\n  console.log($.msg)\n\n  cb({ out: $.get('msg') })\n}\n",
+          "provider": "./{ns}.{name}.yml"
+        },
+        "say": {
+          "title": "SayIt",
+          "ns": "console",
+          "name": "say",
+          "ports": {
+            "input": {
+              "msg": {
+                "type": "string"
+              }
+            },
+            "output": {
+              "out": {
+                "type": "string"
+              },
+              "error": {
+                "type": "Error"
+              }
+            }
+          },
+          "dependencies": {
+            "npm": {
+              "say": "latest"
+            }
+          },
+          "fn": "output = () => {\n  say.speak($.msg || '', 'default', 1.0, (error) => {\n    if (error) {\n      cb( { error: $.create(error) } )\n    } else {\n      cb( { out: $.get('msg') })\n    }\n  })\n}\n",
+          "provider": "./{ns}.{name}.yml"
+        }
+      }
+    }
+  }
+}
