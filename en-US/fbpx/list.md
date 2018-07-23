@@ -8,7 +8,6 @@ Search for available node definitions.
 
 Without any arguments will show all available nodes:
 ```
-$ fbpx list
 $ fbpx list | more
 
  canvas/beginPath
