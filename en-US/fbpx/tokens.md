@@ -2,7 +2,7 @@
 name: Tokens
 ---
 
-### Tokens
+# Tokens
 
 Mainly useful to debug your .fbp file.
 
