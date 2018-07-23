@@ -53,7 +53,7 @@ Some of the more common namespaces are:
 - chix:outputPort
 
 
- It's also possible to run with `--debug` flag. This will print a report after execution or when you manually stop the flow using ^C:
+ It's also possible to run with `--debug` flag. This will print a report after execution or when you manually stop the flow using `^C`:
  
 ```
 Node:
@@ -87,6 +87,6 @@ Node:
 │ Identifier │ ns         │ name │ status  │ filled │ RunCount │ Output count │
 ├────────────┼────────────┼──────┼─────────┼────────┼──────────┼──────────────┤
 │ Request    │ superagent │ api  │ running │ 2      │ 1        │ 0            │
-└────────────┴────────────┴──────┴─────────┴────────┴──────────┴──────────────┘``
+└────────────┴────────────┴──────┴─────────┴────────┴──────────┴──────────────┘
  
 ```
