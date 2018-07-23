@@ -4,6 +4,8 @@ Mainly useful to debug your .fbp file.
 
 This action will list the lexer tokens recognized within the file.
 
+It will display each recognized line followed by the recognized tokens.
+
 ```
 $ fbpx tokens example.fbp
 
