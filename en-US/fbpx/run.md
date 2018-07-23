@@ -31,7 +31,9 @@ $ fbpx run test.fbp
     ...
 ```
 
-Using debug, you'll see a lot of debugging information:
+### Debug
+
+Using the DEBUG environment variable, you'll see a lot of debugging information:
 ```
 $ DEBUG=* fbpx run test.fbp
 ```
@@ -39,7 +41,7 @@ $ DEBUG=* fbpx run test.fbp
 Under the hood `chix-flow` is using the [debug](https://www.npmjs.com/package/debug) package.
 Which makes it possible to select what kind of debug messages you want to see.
 
-Currently the following namespaces are available:
+Some of the more common namespaces are:
 
 - chix:io
 - chix:inputPort
@@ -50,3 +52,40 @@ Currently the following namespaces are available:
 - chix:node
 - chix:outputPort
 
+
+ It's also possible to run with `--debug` flag. This will print a report after execution or when you manually stop the flow using ^C:
+ 
+ `Node:
+┌────────────┬─────────┬──────┬─────────┬────────┬──────────┬──────────────┐
+│ Identifier │ ns      │ name │ status  │ filled │ RunCount │ Output count │
+├────────────┼─────────┼──────┼─────────┼────────┼──────────┼──────────────┤
+│ Log        │ console │ log  │ running │ 0      │ 1        │ 0            │
+└────────────┴─────────┴──────┴─────────┴────────┴──────────┴──────────────┘
+Ports:
+┌──────┬───────┬───────┬─────────┬─────────┬─────────┬─────────┬───────┬───────┬──────────┬─────────────┐
+│ name │ async │ state │ indexed │ default │ context │ persist │ fills │ reads │ RunCount │ connections │
+├──────┼───────┼───────┼─────────┼─────────┼─────────┼─────────┼───────┼───────┼──────────┼─────────────┤
+│ msg  │ true  │ open  │ false   │         │         │ false   │ 1     │ 1     │ 1        │ 1           │
+└──────┴───────┴───────┴─────────┴─────────┴─────────┴─────────┴───────┴───────┴──────────┴─────────────┘
+
+Node:
+┌────────────┬────────────┬──────┬─────────┬────────┬──────────┬──────────────┐
+│ Identifier │ ns         │ name │ status  │ filled │ RunCount │ Output count │
+├────────────┼────────────┼──────┼─────────┼────────┼──────────┼──────────────┤
+│ EndRequest │ superagent │ end  │ running │ 0      │ 1        │ 0            │
+└────────────┴────────────┴──────┴─────────┴────────┴──────────┴──────────────┘
+Ports:
+┌─────────┬───────┬───────┬─────────┬─────────┬─────────┬─────────┬───────┬───────┬──────────┬─────────────┐
+│ name    │ async │ state │ indexed │ default │ context │ persist │ fills │ reads │ RunCount │ connections │
+├─────────┼───────┼───────┼─────────┼─────────┼─────────┼─────────┼───────┼───────┼──────────┼─────────────┤
+│ request │ false │ open  │ false   │         │         │ false   │ 1     │ 1     │ 0        │ 1           │
+└─────────┴───────┴───────┴─────────┴─────────┴─────────┴─────────┴───────┴───────┴──────────┴─────────────┘
+
+Node:
+┌────────────┬────────────┬──────┬─────────┬────────┬──────────┬──────────────┐
+│ Identifier │ ns         │ name │ status  │ filled │ RunCount │ Output count │
+├────────────┼────────────┼──────┼─────────┼────────┼──────────┼──────────────┤
+│ Request    │ superagent │ api  │ running │ 2      │ 1        │ 0            │
+└────────────┴────────────┴──────┴─────────┴────────┴──────────┴──────────────┘``
+ 
+ ```
