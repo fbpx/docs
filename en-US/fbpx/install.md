@@ -37,7 +37,7 @@ $ fbpx install example.fbp
 added 24 packages from 22 contributors and audited 25 packages in 2.168s
 found 0 vulnerabilities
 ```
-In this case there is only one dependencies. Dependencies are however search for recursively and all required dependencies will be installed automatically.
+In this case there is only one dependencies. Dependencies are however searched for recursively and all required dependencies will be installed automatically.
 
 #### Debug
 
