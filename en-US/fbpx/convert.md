@@ -4,7 +4,7 @@ name: Convert
 
 # Convert/Inspect
 
-Convert the flow file using different formats.
+Convert the flow file into different formats.
 
 ```
 $ fbpx convert --help
