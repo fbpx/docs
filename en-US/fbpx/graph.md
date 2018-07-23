@@ -30,3 +30,11 @@ digraph structs {
 This output can then be used to generate an .svg, .png etc. using a tool which is able to read dot graphs.
 
 e.g.
+```
+fbpx graph test.fbp | dot -Tpng > test.png
+```
+
+Which will result in the following image:
+```
+
+```
