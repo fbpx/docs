@@ -1,3 +1,7 @@
+---
+name: Input
+---
+
 # Input
 
 Shows the input defined in the flow file.
