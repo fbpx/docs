@@ -1,5 +1,5 @@
 ---
-name: Introduction
+name: Intro
 ---
 
 # Chix
