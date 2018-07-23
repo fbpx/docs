@@ -4,7 +4,7 @@ name: Browserify
 
 # Browserify
 
-Browserifies to flow file.
+[Browserifies](http://browserify.org/) the flow file.
 
 The generated bundle can be included from the browser and executes the flow.
 
