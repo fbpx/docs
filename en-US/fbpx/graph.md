@@ -34,6 +34,6 @@ e.g.
 fbpx graph test.fbp | dot -Tpng > test.png
 ```
 
-Which will result in the following image:
+Which will result in the diagram below:
 
-![Test.png](https://repos.chix.io/chix/docs/raw/8c53f03b89f36ba9cff2f6284d40096f3e1a56ab/en-US/fbpx/test.png)
+![Test.png](https://repos.chix.io/chix/docs/raw/8c53f03b89f36ba9cff2f6284d40096f3e1a56ab/en-US/fbpx/test.svg)
