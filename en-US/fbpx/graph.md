@@ -31,9 +31,9 @@ This output can then be used to generate an .svg, .png etc. using a tool which i
 
 e.g.
 ```
-fbpx graph test.fbp | dot -Tpng > test.png
+fbpx graph test.fbp | dot -Tsvg > test.svg
 ```
 
 Which will result in the diagram below:
 
-![Test.png](https://repos.chix.io/chix/docs/raw/8c53f03b89f36ba9cff2f6284d40096f3e1a56ab/en-US/fbpx/test.svg)
+![Test.svg](https://repos.chix.io/chix/docs/raw/master/en-US/fbpx/test.svg)
