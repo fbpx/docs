@@ -7,7 +7,7 @@ name: Dependencies
 Show a list of dependencies used by the flow file.
 
 ```
-$ fbpx deps test.fbp
+$ fbpx deps request.fbp
 npm:
   superagent: ^0.18.0
 ```
