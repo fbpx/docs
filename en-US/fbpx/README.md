@@ -6,6 +6,23 @@ name: FBPX
 
 FBPX is the main command line program for Chiχ​.
 
+
+The following commands are available:
+
+- [login](/docs/fbpx/login)
+- [run](/docs/fbpx/run)
+- [graph](/docs/fbpx/graph)
+- [input](/docs/fbpx/input)
+- [deps](/docs/fbpx/deps)
+- [tokens](/docs/fbpx/tokens)
+- [list/info](/docs/fbpx/list)
+- [convert](/docs/fbpx/convert)
+- [compile](/docs/fbpx/compile)
+- [install](/docs/fbpx/install)
+- [browserify](/docs/fbpx/browserify)
+
+
+
 ```
  fbpx --help
 
