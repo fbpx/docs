@@ -20,7 +20,7 @@ The following commands are available:
 - [compile](/docs/fbpx/compile)
 - [install](/docs/fbpx/install)
 - [browserify](/docs/fbpx/browserify)
-
+- [deploy](/docs/fbpx/deploy)
 
 
 ```
