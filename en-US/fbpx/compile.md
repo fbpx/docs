@@ -53,3 +53,5 @@ An example project structure looks like:
 │   └── nodes.yaml
 └── x.json
 ```
+
+After running `compile` the project can be deployed using [fbpx deploy](https://docs.chix.io/docs/fbpx/deploy)
