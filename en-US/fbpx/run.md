@@ -18,7 +18,7 @@ EndRequest(superagent/end)
 'http://example.com' -> url Request
 
 Request request -> request EndRequest
-EndRequest res [text] -> msg Log(console/log
+EndRequest res [text] -> msg Log(console/log)
 ```
 
 
