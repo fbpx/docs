@@ -8,7 +8,7 @@ Generates a dot graph from your flow file.
 
 Usage:
 ```
- fbpx graph test.fbp
+$ fbpx graph test.fbp
 digraph structs {
   label="Example flow!";
 
