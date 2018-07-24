@@ -102,16 +102,16 @@ It's main concept is not to write code, but using existing functionality and wra
 So let's pick an interesting package from npm. e.g. https://www.npmjs.com/package/say
 Instead of just logging `Hello World!` it would be nice to actually hear it.
 
-In order to use packages, we first must execute `npm init -y` inside our project directory.
+In order to use packages, we first must have a `package.json` file as `fbpx` will expect it to be present and store the dependencies.
+
+You can create one by executing `npm init -y` inside your project directory.
 ```
 $ npm init -y
 ```
 
-As `fbpx` will expect it to be present and store the dependencies.
+We can either directly install the package through npm or use `fbpx install hello_world.fbp' to install all the dependencies used by the nodes defined in the flow file.
 
-We can either directly install the package through npm or use `fbpx install hello_world.fbp' to install all dependencies used by the nodes defined in the flow file.
-
-Created a new file following our provider's resolve pattern (`./{ns}.{name}.yml`). To contain our `Say.js` node definition.
+Create a new file following our provider's resolve pattern (`./{ns}.{name}.yml`) to contain our `Say.js` node definition.
 
 console.say.yml
 ```
