@@ -6,7 +6,7 @@ name: Getting Started
 
 Let's create our first Chiχ project!
 
-After you've install the fbpx cli, you can test it by writing your first .fbp file.
+After you've installed the fbpx cli, you can test it by writing your first .fbp file.
 
 Open a blank file with an .fbp extension. e.g. `hello_world.fbp`
 
