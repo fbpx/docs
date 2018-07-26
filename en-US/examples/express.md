@@ -15,17 +15,18 @@ provider https://api.chix.io/v1/nodes/rhalff/{ns}/{name}
 
 Express(express/app), Listen(express/listen)
 HomeRoute(express/get), SendHome(express/send)
+AboutRoute(express/get), SendAbout(express/send)
 
 '8080' -> port Listen
 Express app -> app Listen
 
-'/' -> -> path HomeRoute
+'/' -> path HomeRoute
 Express app -> app HomeRoute
 HomeRoute res -> res SendHome
-'Home' -> ^body HomeRoute
+'Home' -> ^body SendHome
 
-'/about' -> -> path HomeRoute
-Express app -> app HomeRoute
-HomeRoute res -> res SendHome
-'About' -> ^body HomeRoute
+'/about' -> path AboutRoute
+Express app -> app AboutRoute
+AboutRoute res -> res SendAbout
+'About' -> ^body SendAbout
 ```
