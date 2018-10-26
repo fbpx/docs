@@ -148,6 +148,11 @@ found 0 vulnerabilities
 ```
 Note: In able to run say.js festival must be installed. On ubuntu this is as easy as running `apt install festival`
 
+Now run the flow file again:
+```
+$ fbpx run hello_world.fbp 
+```
+
 If all went well you'll hear `Hello World!`
 
 ### Using context
