@@ -1,5 +1,5 @@
 ---
-name: Login
+title: Login
 ---
 
 # Login

@@ -1,5 +1,5 @@
 ---
-name: Compile
+title: Compile
 ---
 
 # Compile

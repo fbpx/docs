@@ -1,3 +1,7 @@
+---
+title: Serve 
+---
+
 # Serve
 
 The serve command will start a chix nodejs runtime, with or without a pre-existing graph.

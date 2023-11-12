@@ -1,5 +1,5 @@
 ---
-name: Install
+title: Install
 ---
 
 # Install

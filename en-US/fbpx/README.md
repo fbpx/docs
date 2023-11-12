@@ -1,5 +1,5 @@
 ---
-name: FBPX
+title: FBPX
 ---
 
 # FBPX

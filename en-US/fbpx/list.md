@@ -1,5 +1,5 @@
 ---
-name: List/Info
+title: List/Info
 ---
 
 # List / Info

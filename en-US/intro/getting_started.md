@@ -1,5 +1,5 @@
 ---
-name: Getting Started
+title: Getting Started
 ---
 
 # Getting Started

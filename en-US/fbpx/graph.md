@@ -1,5 +1,5 @@
 ---
-name: Graph
+title: Graph
 ---
 
 # Graph

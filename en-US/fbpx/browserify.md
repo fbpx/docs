@@ -1,5 +1,5 @@
 ---
-name: Browserify
+title: Browserify
 ---
 
 # Browserify

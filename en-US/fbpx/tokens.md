@@ -1,5 +1,5 @@
 ---
-name: Tokens
+title: Tokens
 ---
 
 # Tokens

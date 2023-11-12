@@ -1,5 +1,5 @@
 ---
-name: Input
+title: Input
 ---
 
 # Input

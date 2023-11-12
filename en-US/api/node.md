@@ -1,5 +1,5 @@
 ---
-name: Node
+title: Node
 ---
 
 # Node
