@@ -9,7 +9,7 @@ title: Express Server
 ns: express
 name: example
 
-provider https://api.chix.io/v1/nodes/rhalff/{ns}/{name}
+provider https://api.fbpx.io/v1/nodes/rhalff/{ns}/{name}
 
 Express(express/app), Listen(express/listen)
 HomeRoute(express/get), SendHome(express/send)

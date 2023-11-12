@@ -2,7 +2,7 @@
 title: Deploy
 ---
 
-Use deploy to send the nodes to the api hosted at `https://api.chix.io`
+Use deploy to send the nodes to the api hosted at `https://api.fbpx.io`
 
 Each deploy will create a new release.
 
@@ -10,8 +10,8 @@ Given you are within a project directory:
 
 ```
 $ DEBUG=* fbpx deploy --verbose
-  superagent PUT https://api.chix.io/v1/projects/rhalff +0ms
-  superagent PUT https://api.chix.io/v1/projects/rhalff -> 200 +1s
+  superagent PUT https://api.fbpx.io/v1/projects/rhalff +0ms
+  superagent PUT https://api.fbpx.io/v1/projects/rhalff -> 200 +1s
 info Project twitter updated successfully.  
 ```
 
@@ -23,5 +23,5 @@ Deployed nodes will be accessible from flow files by there provider url:
 
 e.g.
 ```
-provider https://api.chix.io/v1/nodes/rhalff/{ns}/{name}
+provider https://api.fbpx.io/v1/nodes/rhalff/{ns}/{name}
 ```

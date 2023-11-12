@@ -40,7 +40,7 @@ The following commands are available:
     run|r [options] [filename]        Run graph
     graph|g [options] [filename]      Show Graph
     input [options]                   Show input data
-    login                             Login to api.chix.io to set token
+    login                             Login to api.fbpx.io to set token
     deps [options]                    Show dependencies
     deploy                            Deploy nodes to api.
     tokens [options]                  Debug lexer tokens

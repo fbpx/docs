@@ -6,7 +6,7 @@ The main command line tool for Chiχ is `fbpx`, you can install it using npm.
 
 
 ```
-$ npm i @chix/fbpx-cli -g
+$ npm i @fbpx/cli -g
 ```
 
 ```
@@ -28,7 +28,7 @@ $ fbpx --help
     run|r [options] [filename]        Run graph
     graph|g [options] [filename]      Show Graph
     input [options]                   Show input data
-    login                             Login to api.chix.io to set token
+    login                             Login to api.fbpx.io to set token
     deps [options]                    Show dependencies
     deploy                            Deploy nodes to api.
     tokens [options]                  Debug lexer tokens

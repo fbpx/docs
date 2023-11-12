@@ -11,9 +11,9 @@ Prior to using this command make sure you're around a package.json file.
 
 ```
 $ fbpx browserify test.fbp
-ERR! fbpx browserify requires @chix/flow to be installed.
-        Run npm install @chix/flow --save-dev to do so
+ERR! fbpx browserify requires @fbpx/flow to be installed.
+        Run npm install @fbpx/flow --save-dev to do so
 ```
 
-Run `npm install @chix/flow` so browserify will know where to find it.
+Run `npm install @fbpx/flow` so browserify will know where to find it.
 

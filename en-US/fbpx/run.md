@@ -8,7 +8,7 @@ example.fbp
 ```
 title: Example flow
 
-provider https://api.chix.io/v1/nodes/rhalff/{ns}/{name}
+provider https://api.fbpx.io/v1/nodes/rhalff/{ns}/{name}
 
 Request(superagent/api)
 EndRequest(superagent/end)
@@ -36,19 +36,19 @@ Using the DEBUG environment variable, you'll see a lot of debugging information:
 $ DEBUG=* fbpx run test.fbp
 ```
 
-Under the hood `chix-flow` is using the [debug](https://www.npmjs.com/package/debug) package.
+Under the hood `@fbpx/flow` is using the [debug](https://www.npmjs.com/package/debug) package.
 Which makes it possible to select what kind of debug messages you want to see.
 
 Some of the more common namespaces are:
 
-- chix:io
-- chix:inputPort
-- chix:connector
-- chix:pm
-- chix:packet
-- chix:actor
-- chix:node
-- chix:outputPort
+- fbpx:io
+- fbpx:inputPort
+- fbpx:connector
+- fbpx:pm
+- fbpx:packet
+- fbpx:actor
+- fbpx:node
+- fbpx:outputPort
 
 
  It's also possible to run with `--debug` flag. This will print a report after execution or when you manually stop the flow using `^C`:

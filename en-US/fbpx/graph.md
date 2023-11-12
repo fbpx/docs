@@ -34,4 +34,4 @@ fbpx graph test.fbp | dot -Tsvg > test.svg
 
 Which will result in the diagram below:
 
-![Test.svg](https://repos.chix.io/chix/docs/raw/master/en-US/fbpx/test.png)
+![Test.svg](https://repos.fbpx.io/fbpx/docs/raw/master/en-US/fbpx/test.png)

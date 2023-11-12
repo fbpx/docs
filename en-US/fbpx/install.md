@@ -18,7 +18,7 @@ Example flow containing a node which uses a dependency (In this case superagent)
 ```
 title: Example flow
 
-provider https://api.chix.io/v1/nodes/rhalff/{ns}/{name}
+provider https://api.fbpx.io/v1/nodes/rhalff/{ns}/{name}
 
 Request(superagent/get)
 

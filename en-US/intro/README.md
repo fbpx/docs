@@ -5,5 +5,5 @@ title: Intro
 
 ## Development Status
 
-Chix is currently still in development.
+FBPX is currently still in development.
 

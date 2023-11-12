@@ -25,7 +25,7 @@ Usage:
 
     -h, --help              output usage information
     -V, --version           output the version number
-    -t, --type [name]       Runtime type chix, noflo-nodejs
+    -t, --type [name]       Runtime type fbpx, noflo-nodejs
     -c, --cache             cache components
     -p, --proxy             expose /proxy to proxy requests to e.g. a browser
     -s, --secure            secure wss or ws

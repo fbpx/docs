@@ -2,7 +2,7 @@
 title: Serve 
 ---
 
-The serve command will start a chix nodejs runtime, with or without a pre-existing graph.
+The serve command will start a fbpx nodejs runtime, with or without a pre-existing graph.
 
 This runtime is compatible with the fbp protocol.
 

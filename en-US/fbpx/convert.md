@@ -62,5 +62,5 @@ links:
 title: Example flow!
 providers:
   '@':
-    url: 'https://api.chix.io/v1/nodes/rhalff/{ns}/{name}'
+    url: 'https://api.fbpx.io/v1/nodes/rhalff/{ns}/{name}'
 ```
