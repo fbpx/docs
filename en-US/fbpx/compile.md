@@ -2,7 +2,6 @@
 title: Compile
 ---
 
-# Compile
 The compile action is meant to be run from a project directory.
 
 It takes all flows and nodes defined in the project and reduces it to a single `x.json` file.

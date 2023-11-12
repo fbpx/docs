@@ -2,8 +2,6 @@
 title: Install
 ---
 
-# Install
-
 Installs the dependencies of a flow file.
 
 Prior to installation make sure the current directory (or one of it's ancestors) contains a `package.json`.

@@ -2,8 +2,6 @@
 title: Graph
 ---
 
-# Graph
-
 Generates a dot graph from your flow file.
 
 Usage:

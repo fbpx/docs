@@ -2,10 +2,6 @@
 title: Node
 ---
 
-# Node
-
-
-
 # Node Functions
 There are several ways of defining to functionality within the node.
 

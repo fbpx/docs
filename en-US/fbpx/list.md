@@ -1,8 +1,6 @@
 ---
-title: List/Info
+title: List / Info
 ---
-
-# List / Info
 
 Search for available node definitions.
 

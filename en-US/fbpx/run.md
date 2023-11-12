@@ -2,8 +2,6 @@
 title: Run
 ---
 
-# Run
-
 Run the graph.
 
 example.fbp

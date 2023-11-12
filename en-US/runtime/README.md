@@ -1,8 +1,6 @@
 ---
-title: Runtime
+title: FBPX Runtime
 ---
-
-# Chix Runtime
 
 Runtime to be used with the noflo fbp protocol:
 

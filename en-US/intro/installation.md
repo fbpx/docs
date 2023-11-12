@@ -2,7 +2,6 @@
 title: Installation
 ---
 
-# Installation
 The main command line tool for Chiχ is `fbpx`, you can install it using npm.
 
 

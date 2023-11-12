@@ -2,8 +2,6 @@
 title: FBPX
 ---
 
-# FBPX
-
 FBPX is the main command line program for Chiχ​.
 
 

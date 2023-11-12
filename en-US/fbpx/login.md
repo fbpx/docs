@@ -2,8 +2,6 @@
 title: Login
 ---
 
-# Login
-
 Logs in to the api at `https://api.chix.io/v1`
 
 Some cli actions require the user to be logged in and have valid access token.

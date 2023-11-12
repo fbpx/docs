@@ -2,8 +2,6 @@
 title: Express
 ---
 
-# Express
-
 Example of running an express webserver and serving some routes.
 
 ```
