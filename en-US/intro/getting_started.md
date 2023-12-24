@@ -2,7 +2,7 @@
 title: Getting Started
 ---
 
-Let's create our first Chiχ project!
+Let's create our first FBPX project!
 
 After you've installed the fbpx cli, you can test it by writing your first .fbp file.
 
